@@ -1,5 +1,5 @@
 #include<stdio.h>
-int stack[30],front=0,rear=-1,n,choice;
+int queue[30],front=0,rear=-1,n,choice;
 void enqueue();
 void dequeue();
 void peak();
@@ -48,7 +48,7 @@ int main()
      {
         rear=rear+1;
         printf("Enter the element to enqueue:\n");
-        scanf("%d",&stack[rear]);  
+        scanf("%d",&queue[rear]);  
      }
      else
      {
@@ -58,7 +58,7 @@ int main()
    
    void dequeue()
    {   if(front==rear){
-       printf("The dequeued element is %d\n",stack[front]);
+       printf("The dequeued element is %d\n",queue[front]);
        front=0;
        rear=-1;
    }
@@ -69,7 +69,7 @@ int main()
        }
        else
        {
-          printf("The dequeued element is %d\n",stack[front]);
+          printf("The dequeued element is %d\n",queue[front]);
           front=front+1;;
        }
    }
@@ -81,7 +81,7 @@ int main()
    }
    else
    {
-     printf("The frontmost element is %d\n",stack[front]);
+     printf("The frontmost element is %d\n",queue[front]);
      }
    }
    
@@ -96,7 +96,7 @@ int main()
      printf("The elements in the queue are:\n");
      for(i=rear;i>=front;i--)
      {
-        printf("%d\n",stack[i]);
+        printf("%d\n",queue[i]);
      }
      }
    }
